@@ -1,0 +1,28 @@
+<template>
+  <v-footer class="footer" absolute="true">
+    <small class="copyright">&copy; {{copyrightYear}} Shota Fukushige</small>
+  </v-footer>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+
+    }
+  },
+  computed: {
+    copyrightYear: function () {
+      const now = new Date()
+      return now.getFullYear()
+    },
+  }
+};
+</script>
+<style lang="scss" scoped>
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
