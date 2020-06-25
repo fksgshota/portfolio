@@ -1,25 +1,25 @@
 <template>
   <v-container class="self_introduction">
     <v-card class="my_info">
-      <div class="my_info__img">
-        <img src="/shota_fukushige_icon.jpg" class="my_info__icon" />
-        <SNSList></SNSList>
+      <div class="my_info__top">
+        <img src="/shota_fukushige_icon.jpg" class="my_info__img" />
+        <div class="my_info__overview">
+          <v-card-title class="my_info__ja_name">福重 章太</v-card-title>
+          <v-card-subtitle class="my_info__en_name">Fukushige Shota</v-card-subtitle>
+          <p class="my_info__age">{{ageDisp}}</p>
+          <p class="my_info__company">株式会社ユニマル</p>
+          <p class="my_info__work">フルスタックエンジニア見習い</p>
+          <SNSList></SNSList>
+        </div>
       </div>
-      <div class="my_info__overview">
-        <v-card-title class="my_info__ja_name">福重 章太</v-card-title>
-        <v-card-subtitle class="my_info__en_name">Fukushige Shota</v-card-subtitle>
-        <p class="my_info__age">{{ageDisp}}</p>
-        <p class="my_info__work">株式会社ユニマル</p>
-        <p class="my_info__work">フルスタックエンジニア見習い</p>
-        <v-card-text class="my_info__history">
-          2012年に京セラ株式会社に入社。製造オペレーターとしての作業を行いながら、合間を縫ってパソコンスキルを活かした業務改善に取り組む。作業時間改善の累計は2790時間/月以上に及ぶ。元々パソコンに触れるのが好きでゲームや動画編集、パソコン本体の作成などを学生の頃から行う。業務改善を目的としたExcelVBAを学んだのをキッカケにプログラミングにハマり、自分のスキルとして身につけて仕事にしたいと強く思うようになる。
-          2019年9月末にて同社を退職。2019年10月よりweb系エンジニア見習いとして転職し、勉強に勤しむ毎日。
-          <br />
-          <br />趣味：ギター、歌、ゲーム、プログラミング、パソコン、ガジェット
-          <br />ブログ：
-          <a class="my_info__blog" href="https://fksgshota.hatenablog.com/">笑う門には福重なる</a>
-        </v-card-text>
-      </div>
+      <v-card-text class="my_info__history">
+        2012年に京セラ株式会社に入社。製造オペレーターとしての作業を行いながら、合間を縫ってパソコンスキルを活かした業務改善に取り組む。作業時間改善の累計は2790時間/月以上に及ぶ。元々パソコンに触れるのが好きでゲームや動画編集、パソコン本体の作成などを学生の頃から行う。業務改善を目的としたExcelVBAを学んだのをキッカケにプログラミングにハマり、自分のスキルとして身につけて仕事にしたいと強く思うようになる。
+        2019年9月末にて同社を退職。2019年10月より株式会社ユニマルにエンジニア見習いとして転職し、勉強に勤しむ毎日。
+        <br />
+        <br />趣味：ギター、歌、ゲーム、プログラミング、パソコン、ガジェット
+        <br />ブログ：
+        <a class="my_info__blog" href="https://fksgshota.hatenablog.com/">笑う門には福重なる</a>
+      </v-card-text>
     </v-card>
   </v-container>
 </template>
@@ -59,8 +59,21 @@ export default {
 <style lang="scss" scoped>
 .my_info {
   display: flex;
-  &__icon {
-    width: 300px;
+  flex-direction: column;
+  &__top {
+    display: flex;
+    @media screen and (max-width: 479px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__img {
+    margin: 16px 0 0 16px;
+    width: 250px;
+    @media screen and (max-width: 479px) {
+      width: 100%;
+      margin: initial;
+      padding: 16px;
+    }
   }
   &__overview {
     width: auto;
@@ -69,9 +82,14 @@ export default {
     padding-left: 16px;
     margin-bottom: 0;
   }
+  &__company {
+    padding-left: 16px;
+    margin-bottom: 0;
+  }
   &__work {
     padding-left: 16px;
     margin-bottom: 0;
+    padding-bottom: 16px;
   }
   &__blog {
     margin-bottom: 0;
