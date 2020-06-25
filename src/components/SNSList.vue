@@ -45,7 +45,8 @@ export default {
   list-style: none;
   align-items: center;
   justify-content: start;
-  padding-left: 5px;
+  padding-left: 10px;
+  flex-wrap: wrap;
   &__link {
     text-decoration: none;
   }
