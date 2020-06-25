@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="footer" absolute="true">
+  <v-footer class="footer" absolute="true" color="#ffffff">
     <small class="copyright">&copy; {{copyrightYear}} Shota Fukushige</small>
   </v-footer>
 </template>
@@ -26,3 +26,4 @@ export default {
   align-items: center;
 }
 </style>
+
