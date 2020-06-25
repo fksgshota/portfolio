@@ -1,46 +1,51 @@
 <template>
   <v-app>
-    <v-app-bar class="header"></v-app-bar>
+    <Header></Header>
     <div class="first_view">
       <h1 class="first_view__title">Shota Fukushige's portfolio</h1>
     </div>
-    <!-- <v-container>
-      <div class>
-        <h2>福重 章太</h2>
-        <p>Fukushige Shota</p>
-        <img src="" alt="">
-        <p>年齢</p>
-        <p>職種</p>
-
-        <p>職歴</p>
-      </div>
-    </v-container>
-    <SkillCardList></SkillCardList>
-    <p>製作物</p>
-    <p>お問い合わせ</p>-->
-    <v-footer class="footer" absolute="true">
-      <small class="copyright">&copy; 2020 Shota Fukushige</small>
-    </v-footer>
+    <div class="second_block">
+      <SelfIntroduction></SelfIntroduction>
+    </div>
+    <!-- <SkillCardList></SkillCardList>
+    <ProductionCardList></ProductionCardList>-->
+    <Footer></Footer>
   </v-app>
 </template>
 
 <script>
+import Header from './components/Header';
+import Footer from './components/Footer';
+import SelfIntroduction from './components/SelfIntroduction';
+// import ProductionCardList from './components/ProductionCardList';
+// import SkillCardList from './components/SkillCardList';
+
 
 export default {
   name: 'App',
 
   components: {
+    Header,
+    Footer,
+    SelfIntroduction,
+    // ProductionCardList,
+    // SkillCardList
   },
 
   data: () => ({
     //
-  }),
+  })
 };
 </script>
 
 <style lang="scss" scoped>
 .first_view {
-  background-image: url("../public/shota_fukushige.jpg");
+  background: linear-gradient(
+      to top left,
+      rgb(53, 233, 158, 0.6),
+      rgb(15, 52, 67, 0.6)
+    ),
+    url("/shota_fukushige.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -56,9 +61,8 @@ export default {
   }
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.second_block {
+  background-color: #eeeeee;
+  padding: 80px 0;
 }
 </style>
