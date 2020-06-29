@@ -1,14 +1,15 @@
 <template>
-  <div>
-    <h1>Skills</h1>
+  <v-container class="skill_card_list">
+    <h1 class="skill_card_list__title">Skills</h1>
     <SkillCard
       v-for="skill in skills"
       :key="skill.title"
       :title="skill.title"
       :star="skill.star"
       :description="skill.description"
+      :img_path="skill.img_path"
     ></SkillCard>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -20,53 +21,111 @@ export default {
       skills: [
         {
           title: "Ruby",
-          star: 3,
-          description: "まぁまぁ"
+          star: 1,
+          description: "まぁまぁ",
+          img_path: "/skills/ruby.png",
         },
         {
           title: "Ruby on Rails",
           star: 3,
           description: "まぁまぁ",
+          img_path: "/Skills/rails.svg",
         },
         {
           title: "JavaScript",
           star: 3,
           description: "まぁまぁ",
+          img_path: "/Skills/javascript.svg",
         },
         {
           title: "Vue.js",
           star: 3,
           description: "まぁまぁ",
+          img_path: "/skills/vue.svg",
         },
         {
           title: "jQuery",
           star: 3,
           description: "まぁまぁ",
+          img_path: "/skills/jquery.svg",
         },
         {
           title: "Firebase",
           star: 3,
           description: "まぁまぁ",
+          img_path: "/skills/firebase.svg",
         },
         {
           title: "Heroku",
           star: 3,
           description: "まぁまぁ",
+          img_path: "/skills/heroku.svg",
         },
         {
           title: "AWS",
           star: 3,
           description: "まぁまぁ",
+          img_path: "",
         },
         {
-          title: "HTML5 & CSS3",
+          title: "HTML5",
           star: 3,
           description: "まぁまぁ",
+          img_path: "/skills/html_5.svg"
+        },
+        {
+          title: "CSS3",
+          star: 3,
+          description: "まぁまぁ",
+          img_path: "/skills/css_3.svg",
+        },
+        {
+          title: "Figma",
+          star: 3,
+          description: "まぁまぁ",
+          img_path: "/skills/figma.svg",
+        },
+        {
+          title: "MySQL",
+          star: 3,
+          description: "まぁまぁ",
+          img_path: "/skills/mysql.png",
+        },
+        {
+          title: "Slack",
+          star: 3,
+          description: "まぁまぁ",
+          img_path: "/skills/slack.svg",
+        },
+        {
+          title: "Git",
+          star: 3,
+          description: "まぁまぁ",
+          img_path: "/skills/git.png",
+        },
+        {
+          title: "CircleCI",
+          star: 3,
+          description: "まぁまぁ",
+          img_path: "/skills/circleci.png",
+        },
+        {
+          title: "PostgreSQL",
+          star: 3,
+          description: "まぁまぁ",
+          img_path: "/skills/postgresql.svg",
+        },
+        {
+          title: "Docker",
+          star: 3,
+          description: "まぁまぁ",
+          img_path: "/skills/docker.png",
         },
         {
           title: "GitHub",
           star: 3,
-          description: "まぁまぁ"
+          description: "まぁまぁ",
+          img_path: "/skills/octocat.png",
         }
       ]
     }
@@ -78,4 +137,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.skill_card_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__title {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 </style>

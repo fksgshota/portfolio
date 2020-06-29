@@ -1,16 +1,24 @@
 <template>
-  <v-card class="skill-card">
-    <v-card-title class="skill-card-title">
-      <p>{{ title }}</p>
+  <v-card class="skill_card">
+    <v-card-title class="skill_card__title">
+      <img :src="img_path" alt="logo" class="skill_card__logo" />
+      {{ title }}
     </v-card-title>
-    <star-rating increment="0.5" max-rating="5" read-only="true" star-size="50" :rating="star"></star-rating>
-    <v-card-text class="skill-card-description">{{ description }}</v-card-text>
+    <v-rating
+      class="skill_card__rating"
+      half-increments="true"
+      readonly="true"
+      size="30"
+      dense="true"
+      :value="star"
+      color="#34e89e"
+      background-color="#eeeeee"
+    ></v-rating>
+    <v-card-text class="skill_card__description">{{ description }}</v-card-text>
   </v-card>
 </template>
 
 <script>
-import StarRating from 'vue-star-rating'
-
 export default {
   props: {
     title: {
@@ -26,17 +34,36 @@ export default {
       type: String,
       required: true,
     },
+    img_path: {
+      type: String,
+      required: true,
+    },
   },
   data () {
     return {
 
     }
-  },
-  components: {
-    StarRating
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.skill_card {
+  width: 49%;
+  margin: 16px 0;
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    width: 30px;
+    margin-right: 16px;
+  }
+  &__rating {
+    padding-left: 16px;
+  }
+}
 </style>
