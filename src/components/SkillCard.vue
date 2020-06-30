@@ -6,10 +6,10 @@
     </v-card-title>
     <v-rating
       class="skill_card__rating"
-      half-increments="true"
-      readonly="true"
+      half-increments
+      readonly
       size="30"
-      dense="true"
+      dense
       :value="star"
       color="#34e89e"
       background-color="#eeeeee"
@@ -39,11 +39,6 @@ export default {
       required: true,
     },
   },
-  data () {
-    return {
-
-    }
-  }
 }
 </script>
 
