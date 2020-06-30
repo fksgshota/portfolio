@@ -1,14 +1,21 @@
 <template>
   <v-app>
     <Header></Header>
-    <div class="first_view">
-      <h1 class="first_view__title">Shota Fukushige's portfolio</h1>
+    <div id="first" class="first_block">
+      <h1 class="first_block__title">Shota Fukushige's portfolio</h1>
     </div>
-    <div class="second_block">
+    <div id="second" class="second_block">
       <SelfIntroduction></SelfIntroduction>
     </div>
-    <!-- <SkillCardList></SkillCardList>
-    <ProductionCardList></ProductionCardList>-->
+    <div id="third" class="third_block">
+      <SkillCardList></SkillCardList>
+    </div>
+    <div id="forth" class="forth_block">
+      <ProductCardList></ProductCardList>
+    </div>
+    <div id="fifth" class="fifth_block">
+      <ContactUs></ContactUs>
+    </div>
     <Footer></Footer>
   </v-app>
 </template>
@@ -17,8 +24,9 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
 import SelfIntroduction from './components/SelfIntroduction';
-// import ProductionCardList from './components/ProductionCardList';
-// import SkillCardList from './components/SkillCardList';
+import SkillCardList from './components/SkillCardList';
+import ProductCardList from './components/ProductCardList';
+import ContactUs from './components/ContactUs';
 
 
 export default {
@@ -28,18 +36,15 @@ export default {
     Header,
     Footer,
     SelfIntroduction,
-    // ProductionCardList,
-    // SkillCardList
+    SkillCardList,
+    ProductCardList,
+    ContactUs
   },
-
-  data: () => ({
-    //
-  })
 };
 </script>
 
 <style lang="scss" scoped>
-.first_view {
+.first_block {
   background: linear-gradient(
       to top left,
       rgb(53, 233, 158, 0.6),
@@ -63,6 +68,13 @@ export default {
 
 .second_block {
   background-color: #eeeeee;
+  padding: 80px 0;
+}
+.third_block {
+  padding: 80px 0;
+  background: linear-gradient(to top left, rgb(53, 233, 158), rgb(15, 52, 67));
+}
+.forth_block {
   padding: 80px 0;
 }
 </style>
