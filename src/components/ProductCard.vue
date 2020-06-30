@@ -6,7 +6,9 @@
     <v-card-actions>
       <v-btn
         class="product_card__link"
-        color="orange"
+        color="#34e89e"
+        outlined
+        block
         :href="url"
         target="_blank"
         rel="noopener noreferrer"
@@ -45,5 +47,8 @@ export default {
 
 <style lang="scss" scoped>
 .product_card {
+  &__img {
+    box-shadow: 0 2px 2px -2px gray;
+  }
 }
 </style>
