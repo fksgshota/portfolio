@@ -1,16 +1,11 @@
 <template>
-  <v-footer class="footer" absolute="true" color="#ffffff">
+  <v-footer class="footer" absolute color="#eeeeee">
     <small class="copyright">&copy; {{copyrightYear}} Shota Fukushige</small>
   </v-footer>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-
-    }
-  },
   computed: {
     copyrightYear: function () {
       const now = new Date()
