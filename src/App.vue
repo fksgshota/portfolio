@@ -60,7 +60,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-
   &__title {
     color: #ffffff;
     font-size: 90px;
@@ -71,7 +70,6 @@ export default {
     }
   }
 }
-
 .second_block {
   padding: 80px 0;
 }
@@ -81,7 +79,6 @@ export default {
 .forth_block {
   padding: 80px 0;
 }
-
 .fifth_block {
   padding: 80px 0;
 }

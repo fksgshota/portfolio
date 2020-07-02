@@ -141,7 +141,6 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
   &__title {
     width: 100%;
     color: #ffffff;
