@@ -2,7 +2,9 @@
   <v-app>
     <Header></Header>
     <div id="first" class="first_block">
-      <h1 class="first_block__title">Shota Fukushige's portfolio</h1>
+      <v-container>
+        <h1 class="first_block__title">Shota Fukushige's portfolio</h1>
+      </v-container>
     </div>
     <div id="second" class="second_block blue-grey lighten-5">
       <SelfIntroduction></SelfIntroduction>
@@ -63,6 +65,10 @@ export default {
     color: #ffffff;
     font-size: 90px;
     font-weight: normal;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: 50px;
+    }
   }
 }
 

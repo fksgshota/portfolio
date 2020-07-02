@@ -2,7 +2,7 @@
   <ul class="sns_list">
     <li class="sns_list__item" v-for="account in accounts" :key="account.name">
       <a class="sns_list__link" :href="account.url">
-        <v-icon large="true">{{account.icon}} fa-fw</v-icon>
+        <v-icon large>{{account.icon}} fa-fw</v-icon>
       </a>
     </li>
   </ul>
