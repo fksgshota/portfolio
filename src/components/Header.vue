@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar class="header" color="#eeeeee">
+  <v-app-bar class="header blue-grey darken-2">
     <HeaderButton v-for="link in links" :key="link.name" :name="link.name" :id="link.id"></HeaderButton>
   </v-app-bar>
 </template>

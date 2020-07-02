@@ -144,7 +144,9 @@ export default {
 
   &__title {
     width: 100%;
-    margin-bottom: 20px;
+    color: #ffffff;
+    margin-bottom: 50px;
+    left: -5px;
   }
 }
 </style>

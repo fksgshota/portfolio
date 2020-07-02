@@ -1,5 +1,5 @@
 <template>
-  <v-card class="skill_card">
+  <v-card class="skill_card blue-grey darken-2" dark>
     <v-card-title class="skill_card__title">
       <img :src="img_path" alt="logo" class="skill_card__logo" />
       {{ title }}

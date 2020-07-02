@@ -37,6 +37,8 @@ export default {
 <style lang="scss" scoped>
 .product_card_list {
   &__title {
+    margin-bottom: 50px;
+    left: -5px;
   }
 }
 </style>

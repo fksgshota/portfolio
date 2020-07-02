@@ -1,5 +1,5 @@
 <template>
-  <v-btn ref="button" text>{{name}}</v-btn>
+  <v-btn class="header_button" ref="button" text dark>{{name}}</v-btn>
 </template>
 
 <script>

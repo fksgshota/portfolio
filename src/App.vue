@@ -4,16 +4,16 @@
     <div id="first" class="first_block">
       <h1 class="first_block__title">Shota Fukushige's portfolio</h1>
     </div>
-    <div id="second" class="second_block">
+    <div id="second" class="second_block blue-grey lighten-5">
       <SelfIntroduction></SelfIntroduction>
     </div>
-    <div id="third" class="third_block">
+    <div id="third" class="third_block blue-grey">
       <SkillCardList></SkillCardList>
     </div>
-    <div id="forth" class="forth_block">
+    <div id="forth" class="forth_block grey lighten-5">
       <ProductCardList></ProductCardList>
     </div>
-    <div id="fifth" class="fifth_block">
+    <div id="fifth" class="fifth_block blue-grey">
       <ContactUs></ContactUs>
     </div>
     <Footer></Footer>
@@ -45,10 +45,10 @@ export default {
 
 <style lang="scss" scoped>
 .first_block {
-  background: linear-gradient(
+  background-image: linear-gradient(
       to top left,
-      rgb(53, 233, 158, 0.6),
-      rgb(15, 52, 67, 0.6)
+      rgb(96, 125, 139, 0.6),
+      rgb(96, 125, 139, 0.6)
     ),
     url("/shota_fukushige.jpg");
   background-size: cover;
@@ -60,21 +60,23 @@ export default {
   align-items: center;
 
   &__title {
-    color: #18ffff;
+    color: #ffffff;
     font-size: 90px;
-    text-shadow: 1px 2px 3px grey;
+    font-weight: normal;
   }
 }
 
 .second_block {
-  background-color: #eeeeee;
   padding: 80px 0;
 }
 .third_block {
   padding: 80px 0;
-  background: linear-gradient(to top left, rgb(53, 233, 158), rgb(15, 52, 67));
 }
 .forth_block {
+  padding: 80px 0;
+}
+
+.fifth_block {
   padding: 80px 0;
 }
 </style>

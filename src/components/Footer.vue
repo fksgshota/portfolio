@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="footer" absolute color="#eeeeee">
+  <v-footer class="footer blue-grey darken-2" absolute dark>
     <small class="copyright">&copy; {{copyrightYear}} Shota Fukushige</small>
   </v-footer>
 </template>
