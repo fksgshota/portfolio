@@ -2,7 +2,9 @@
   <v-container class="self_introduction">
     <v-card class="my_info">
       <div class="my_info__top">
-        <img src="/shota_fukushige_icon.jpg" class="my_info__img" />
+        <div class="block">
+          <img src="/shota_fukushige_icon.jpg" class="my_info__img" />
+        </div>
         <div class="my_info__overview">
           <v-card-title class="my_info__ja_name">福重 章太</v-card-title>
           <v-card-subtitle class="my_info__en_name">Fukushige Shota</v-card-subtitle>
@@ -79,9 +81,13 @@ export default {
       flex-wrap: wrap;
     }
   }
+  .block {
+    display: block;
+  }
   &__img {
     margin: 16px 0 0 16px;
     width: 250px;
+    height: auto;
     @media screen and (max-width: 480px) {
       width: 100%;
       margin: initial;
