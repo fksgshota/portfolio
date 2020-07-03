@@ -1,7 +1,9 @@
 <template>
-  <v-app-bar class="header blue-grey darken-2">
+  <v-app-bar fixed class="header blue-grey darken-2">
+    <v-app-bar-nav-icon dark app class="header_nav_icon" @click="drawer = true"></v-app-bar-nav-icon>
     <v-container class="d-flex justify-space-around">
       <HeaderButton
+        class="header_nav_link"
         v-for="link in links"
         :key="link.name"
         :name="link.name"
@@ -16,6 +18,7 @@ import HeaderButton from './HeaderButton';
 export default {
   data () {
     return {
+      drawer: false,
       links: [
         {
           name: "TOP",
@@ -46,4 +49,16 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.header_nav_icon {
+  display: none;
+  @media screen and (max-width: 480px) {
+    display: initial;
+  }
+}
+.header_nav_link {
+  display: initial;
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+}
 </style>
