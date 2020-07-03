@@ -46,7 +46,7 @@ export default {
 .skill_card {
   width: 49%;
   margin: 16px 0;
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 480px) {
     width: 100%;
   }
   &__title {

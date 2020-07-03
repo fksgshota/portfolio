@@ -52,17 +52,28 @@ export default {
       rgb(96, 125, 139, 0.6),
       rgb(96, 125, 139, 0.6)
     ),
-    url("/shota_fukushige.jpg");
+    url("/shota_fukushige.jpeg");
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 800px;
+  height: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 1900px) {
+    height: 1000px;
+  }
+  @media screen and (max-width: 1500px) {
+    height: 800px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 600px;
+  }
+
   &__title {
     color: #ffffff;
     font-size: 90px;
+    margin-top: 120px;
     font-weight: normal;
     text-align: center;
     @media screen and (max-width: 768px) {

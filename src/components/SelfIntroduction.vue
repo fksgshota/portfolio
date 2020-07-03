@@ -75,14 +75,14 @@ export default {
   flex-direction: column;
   &__top {
     display: flex;
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 480px) {
       flex-wrap: wrap;
     }
   }
   &__img {
     margin: 16px 0 0 16px;
     width: 250px;
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 480px) {
       width: 100%;
       margin: initial;
       padding: 16px;
