@@ -2,6 +2,7 @@
   <v-btn
     text
     dark
+    large
     class="header_button"
     ref="button"
     @click="$vuetify.goTo(selector, easeOutQuad)"
