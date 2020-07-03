@@ -12,7 +12,7 @@
     <div id="third" class="third_block blue-grey">
       <SkillCardList></SkillCardList>
     </div>
-    <div id="forth" class="forth_block grey lighten-5">
+    <div id="fourth" class="fourth_block grey lighten-5">
       <ProductCardList></ProductCardList>
     </div>
     <div id="fifth" class="fifth_block blue-grey">
@@ -76,7 +76,7 @@ export default {
 .third_block {
   padding: 80px 0;
 }
-.forth_block {
+.fourth_block {
   padding: 80px 0;
 }
 .fifth_block {

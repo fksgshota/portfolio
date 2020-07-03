@@ -1,5 +1,11 @@
 <template>
-  <v-btn class="header_button" ref="button" text dark>{{name}}</v-btn>
+  <v-btn
+    text
+    dark
+    class="header_button"
+    ref="button"
+    @click="$vuetify.goTo(selector, easeOutQuad)"
+  >{{name}}</v-btn>
 </template>
 
 <script>
@@ -9,7 +15,7 @@ export default {
       type: String,
       required: true,
     },
-    id: {
+    selector: {
       type: String,
       required: true,
     },

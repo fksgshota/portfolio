@@ -1,7 +1,12 @@
 <template>
   <v-app-bar class="header blue-grey darken-2">
     <v-container class="d-flex justify-space-around">
-      <HeaderButton v-for="link in links" :key="link.name" :name="link.name" :id="link.id"></HeaderButton>
+      <HeaderButton
+        v-for="link in links"
+        :key="link.name"
+        :name="link.name"
+        :selector="link.selector"
+      ></HeaderButton>
     </v-container>
   </v-app-bar>
 </template>
@@ -14,23 +19,23 @@ export default {
       links: [
         {
           name: "TOP",
-          id: "first",
+          selector: "#first",
         },
         {
           name: "Profile",
-          id: "second",
+          selector: "#second",
         },
         {
           name: "Skills",
-          id: "third",
+          selector: "#third",
         },
         {
           name: "Products",
-          id: "first",
+          selector: "#fourth",
         },
         {
           name: "Contact",
-          id: "first",
+          selector: "#fifth",
         },
       ]
     }
