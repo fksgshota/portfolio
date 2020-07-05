@@ -1,60 +1,96 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-content>
-      <HelloWorld/>
-    </v-content>
+    <Header></Header>
+    <div id="first" class="first_block">
+      <v-container>
+        <h1 class="first_block__title">Shota Fukushige's portfolio</h1>
+      </v-container>
+    </div>
+    <div id="second" class="second_block blue-grey lighten-5">
+      <SelfIntroduction></SelfIntroduction>
+    </div>
+    <div id="third" class="third_block blue-grey">
+      <SkillCardList></SkillCardList>
+    </div>
+    <div id="fourth" class="fourth_block grey lighten-5">
+      <ProductCardList></ProductCardList>
+    </div>
+    <div id="fifth" class="fifth_block blue-grey">
+      <ContactUs></ContactUs>
+    </div>
+    <Footer></Footer>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import SelfIntroduction from './components/SelfIntroduction';
+import SkillCardList from './components/SkillCardList';
+import ProductCardList from './components/ProductCardList';
+import ContactUs from './components/ContactUs';
+
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    Header,
+    Footer,
+    SelfIntroduction,
+    SkillCardList,
+    ProductCardList,
+    ContactUs
   },
-
-  data: () => ({
-    //
-  }),
 };
 </script>
+
+<style lang="scss" scoped>
+.first_block {
+  background-image: linear-gradient(
+      to top left,
+      rgb(96, 125, 139, 0.6),
+      rgb(96, 125, 139, 0.6)
+    ),
+    url("/shota_fukushige.jpeg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 1900px) {
+    height: 1000px;
+  }
+  @media screen and (max-width: 1500px) {
+    height: 800px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 600px;
+  }
+
+  &__title {
+    color: #ffffff;
+    font-size: 90px;
+    margin-top: 120px;
+    font-weight: normal;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: 50px;
+    }
+  }
+}
+.second_block {
+  padding: 80px 0;
+}
+.third_block {
+  padding: 80px 0;
+}
+.fourth_block {
+  padding: 80px 0;
+}
+.fifth_block {
+  padding: 80px 0;
+}
+</style>
