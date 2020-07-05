@@ -1,6 +1,18 @@
 <template>
-  <v-app-bar fixed class="header blue-grey darken-2">
-    <v-app-bar-nav-icon dark app class="header_nav_icon" @click="drawer = true"></v-app-bar-nav-icon>
+  <v-app-bar app class="header blue-grey darken-2">
+    <v-app-bar-nav-icon dark class="header_nav_icon" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    <v-navigation-drawer app dark temporary hide-overlay v-model="drawer">
+      <v-list nav dark>
+        <v-list-item-group v-model="group">
+          <HeaderHamburgerMenu
+            v-for="link in links"
+            :key="link.name"
+            :name="link.name"
+            :selector="link.selector"
+          ></HeaderHamburgerMenu>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
     <v-container class="d-flex justify-space-around">
       <HeaderButton
         class="header_nav_link"
@@ -14,37 +26,46 @@
 </template>
 <script>
 import HeaderButton from './HeaderButton';
+import HeaderHamburgerMenu from './HeaderHamburgerMenu';
 
 export default {
   data () {
     return {
       drawer: false,
+      group: null,
+
       links: [
         {
           name: "TOP",
           selector: "#first",
         },
         {
-          name: "Profile",
+          name: "PROFILE",
           selector: "#second",
         },
         {
-          name: "Skills",
+          name: "SKILLS",
           selector: "#third",
         },
         {
-          name: "Products",
+          name: "PRODUCTS",
           selector: "#fourth",
         },
         {
-          name: "Contact",
+          name: "CONTACT",
           selector: "#fifth",
         },
       ]
     }
   },
   components: {
-    HeaderButton
+    HeaderButton,
+    HeaderHamburgerMenu
+  },
+  watch: {
+    group () {
+      this.drawer = false
+    },
   }
 }
 </script>
