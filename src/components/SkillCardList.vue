@@ -104,10 +104,22 @@ export default {
           img_path: "/skills/vue.svg",
         },
         {
+          title: "Nuxt.js",
+          star: 1,
+          description: "学習中",
+          img_path: "/skills/nuxt.svg",
+        },
+        {
           title: "jQuery",
           star: 3,
           description: "基本的な使い方は理解している",
           img_path: "/skills/jquery.svg",
+        },
+        {
+          title: "Middleman",
+          star: 2,
+          description: "業務で触ったことがあり、ある程度は理解している。",
+          img_path: "/skills/middleman.svg",
         },
       ],
       databases: [
