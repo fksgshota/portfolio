@@ -1,13 +1,53 @@
 <template>
   <v-container class="skill_card_list">
     <h1 class="skill_card_list__title">Skills</h1>
+    <h2 class="skill_card_list__subtitle">Language</h2>
     <SkillCard
-      v-for="skill in skills"
-      :key="skill.title"
-      :title="skill.title"
-      :star="skill.star"
-      :description="skill.description"
-      :img_path="skill.img_path"
+      v-for="language in languages"
+      :key="language.title"
+      :title="language.title"
+      :star="language.star"
+      :description="language.description"
+      :img_path="language.img_path"
+    ></SkillCard>
+    <h2 class="skill_card_list__subtitle">Framework</h2>
+    <SkillCard
+      v-for="framework in frameworks"
+      :key="framework.title"
+      :title="framework.title"
+      :star="framework.star"
+      :description="framework.description"
+      :img_path="framework.img_path"
+    ></SkillCard>
+
+    <h2 class="skill_card_list__subtitle">Database</h2>
+    <SkillCard
+      v-for="database in databases"
+      :key="database.title"
+      :title="database.title"
+      :star="database.star"
+      :description="database.description"
+      :img_path="database.img_path"
+    ></SkillCard>
+
+    <h2 class="skill_card_list__subtitle">Infrastructure</h2>
+    <SkillCard
+      v-for="infrastructure in infrastructures"
+      :key="infrastructure.title"
+      :title="infrastructure.title"
+      :star="infrastructure.star"
+      :description="infrastructure.description"
+      :img_path="infrastructure.img_path"
+    ></SkillCard>
+
+    <h2 class="skill_card_list__subtitle">Tool</h2>
+    <SkillCard
+      v-for="tool in tools"
+      :key="tool.title"
+      :title="tool.title"
+      :star="tool.star"
+      :description="tool.description"
+      :img_path="tool.img_path"
     ></SkillCard>
   </v-container>
 </template>
@@ -18,152 +58,157 @@ import SkillCard from './SkillCard';
 export default {
   data () {
     return {
-      skills: [
+      languages: [
         {
           title: "Ruby",
-          star: 1,
-          description: "まぁまぁ",
-          img_path: "/skills/ruby.png",
-        },
-        {
-          title: "Ruby on Rails",
           star: 3,
-          description: "まぁまぁ",
-          img_path: "/Skills/rails.svg",
+          description: "業務で使用している。",
+          img_path: "/skills/ruby.png",
         },
         {
           title: "JavaScript",
           star: 3,
-          description: "まぁまぁ",
+          description: "業務で使用している。",
           img_path: "/Skills/javascript.svg",
         },
         {
-          title: "Vue.js",
+          title: "Go",
+          star: 1,
+          description: "学習を始めたばかり",
+          img_path: "/skills/go.svg",
+        },
+        {
+          title: "HTML5",
+          star: 4,
+          description: "業務で使用している。",
+          img_path: "/skills/html_5.svg"
+        },
+        {
+          title: "CSS3",
+          star: 4,
+          description: "業務で使用している。",
+          img_path: "/skills/css_3.svg",
+        },
+      ],
+      frameworks: [
+        {
+          title: "Ruby on Rails",
           star: 3,
-          description: "まぁまぁ",
+          description: "業務で使用している。",
+          img_path: "/Skills/rails.svg",
+        },
+        {
+          title: "Vue.js",
+          star: 2,
+          description: "業務で使用しながら学習中",
           img_path: "/skills/vue.svg",
         },
         {
           title: "jQuery",
           star: 3,
-          description: "まぁまぁ",
+          description: "基本的な使い方は理解している",
           img_path: "/skills/jquery.svg",
         },
+      ],
+      databases: [
+        {
+          title: "MySQL",
+          star: 3,
+          description: "使用経験あり",
+          img_path: "/skills/mysql.png",
+        },
+        {
+          title: "PostgreSQL",
+          star: 3,
+          description: "使用経験あり",
+          img_path: "/skills/postgresql.svg",
+        },
+        {
+          title: "Redis",
+          star: 3,
+          description: "業務で使用したことがあり、基本的な使い方は理解している。",
+          img_path: "/skills/redis.svg",
+        },
+        {
+          title: "DynamoDB",
+          star: 2,
+          description: "業務で使用したことがあり、基本的な使い方は理解している。",
+          img_path: "/skills/amazon_dynamodb.svg",
+        },
+      ],
+      infrastructures: [
         {
           title: "Firebase",
-          star: 3,
-          description: "まぁまぁ",
+          star: 1,
+          description: "使用経験はあり。",
           img_path: "/skills/firebase.svg",
         },
         {
           title: "Heroku",
           star: 3,
-          description: "まぁまぁ",
+          description: "業務で使用している。基本的な使い方は理解している。",
           img_path: "/skills/heroku.svg",
         },
         {
-          title: "AWS",
-          star: 3,
-          description: "まぁまぁ",
-          img_path: "/skills/amazon_aws.svg",
-        },
-        {
           title: "S3",
-          star: 3,
-          description: "まぁまぁ",
+          star: 2,
+          description: "業務で使用したことがあり、基本的な使い方は理解している。",
           img_path: "/skills/amazon_s3.svg",
         },
-        {
-          title: "Redis",
-          star: 3,
-          description: "まぁまぁ",
-          img_path: "/skills/redis.svg",
-        },
-        {
-          title: "DynamoDB",
-          star: 3,
-          description: "まぁまぁ",
-          img_path: "/skills/amazon_dynamodb.svg",
-        },
+      ],
+      tools: [
         {
           title: "Airtable",
           star: 3,
-          description: "まぁまぁ",
+          description: "情報共有・タスク管理で使用したことあり。",
           img_path: "/skills/airtable.svg",
-        },
-        {
-          title: "Go",
-          star: 3,
-          description: "まぁまぁ",
-          img_path: "/skills/go.svg",
         },
         {
           title: "Asana",
           star: 3,
-          description: "まぁまぁ",
+          description: "業務でメインのタスク管理ツールとして使用している。",
           img_path: "/skills/asana.svg",
         },
         {
-          title: "HTML5",
-          star: 3,
-          description: "まぁまぁ",
-          img_path: "/skills/html_5.svg"
-        },
-        {
-          title: "CSS3",
-          star: 3,
-          description: "まぁまぁ",
-          img_path: "/skills/css_3.svg",
-        },
-        {
-          title: "Figma",
-          star: 3,
-          description: "まぁまぁ",
-          img_path: "/skills/figma.svg",
-        },
-        {
-          title: "MySQL",
-          star: 3,
-          description: "まぁまぁ",
-          img_path: "/skills/mysql.png",
-        },
-        {
-          title: "Slack",
-          star: 3,
-          description: "まぁまぁ",
-          img_path: "/skills/slack.svg",
-        },
-        {
           title: "Git",
-          star: 3,
-          description: "まぁまぁ",
+          star: 4,
+          description: "基本的な使い方は習得している",
           img_path: "/skills/git.png",
         },
         {
           title: "CircleCI",
-          star: 3,
-          description: "まぁまぁ",
+          star: 2,
+          description: "基本的な使い方は理解している。",
           img_path: "/skills/circleci.png",
         },
-        {
-          title: "PostgreSQL",
-          star: 3,
-          description: "まぁまぁ",
-          img_path: "/skills/postgresql.svg",
-        },
+
         {
           title: "Docker",
-          star: 3,
-          description: "まぁまぁ",
+          star: 2,
+          description: "使用したことはあるが、まだ学習中。",
           img_path: "/skills/docker.png",
         },
         {
           title: "GitHub",
-          star: 3,
-          description: "まぁまぁ",
+          star: 4,
+          description: "基本的な使い方は習得していて、多人数でのチーム開発経験あり。",
           img_path: "/skills/octocat.png",
-        }
-      ]
+        },
+        {
+          title: "Figma",
+          star: 3,
+          description: "業務で使用している。",
+          img_path: "/skills/figma.svg",
+        },
+
+        {
+          title: "Slack",
+          star: 3,
+          description: "業務で使用している。",
+          img_path: "/skills/slack.svg",
+        },
+
+      ],
     }
   },
   components: {
@@ -180,8 +225,14 @@ export default {
   &__title {
     width: 100%;
     color: #ffffff;
-    margin-bottom: 50px;
     left: -5px;
+  }
+  &__subtitle {
+    width: 100%;
+    color: #ffffff;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: center;
   }
 }
 </style>
