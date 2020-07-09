@@ -3,7 +3,7 @@
     <v-card class="my_info">
       <div class="my_info__top">
         <div class="block">
-          <img src="/shota_fukushige_icon.jpg" class="my_info__img" />
+          <img src="/portfolio/shota_fukushige_icon.jpg" class="my_info__img" />
         </div>
         <div class="my_info__overview">
           <v-card-title class="my_info__ja_name">福重 章太</v-card-title>

@@ -52,7 +52,7 @@ export default {
       rgb(96, 125, 139, 0.6),
       rgb(96, 125, 139, 0.6)
     ),
-    url("/shota_fukushige.jpeg");
+    url("/portfolio/shota_fukushige.jpeg");
   background-size: cover;
   background-position: center;
   width: 100%;

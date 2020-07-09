@@ -23,7 +23,7 @@ export default {
           title: "Minesweeper",
           url: "https://fksgshota.github.io/minesweeper",
           description: "JavaScriptの学習を目的として制作したマインスイーパーです",
-          img_path: "/products/minesweeper.png",
+          img_path: "/portfolio/products/minesweeper.png",
         },
       ]
     }
