@@ -1,6 +1,6 @@
-    <template>
-  <v-list-item dark @click="$vuetify.goTo(selector, easeOutQuad)">
-    <v-list-item-title>{{name}}</v-list-item-title>
+<template>
+  <v-list-item class="HeaderHamburgerMenu" dark @click="$vuetify.goTo(selector, easeOutQuad)">
+    <v-list-item-title class="HeaderHamburgerMenu__title">{{name}}</v-list-item-title>
   </v-list-item>
 </template>
 
@@ -18,6 +18,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-</style>

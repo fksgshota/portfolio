@@ -1,38 +1,39 @@
 <template>
-  <v-app>
-    <Header></Header>
-    <div id="first" class="first_block">
-      <v-container>
-        <h1 class="first_block__title">Shota Fukushige's portfolio</h1>
+  <v-app class="app">
+    <Header class="header"></Header>
+    <div id="first" class="firstBlock">
+      <v-container class="title firstBlock__container">
+        <h1 class="title__text">Shota Fukushige's portfolio</h1>
       </v-container>
     </div>
-    <div id="second" class="second_block blue-grey lighten-5">
-      <SelfIntroduction></SelfIntroduction>
+    <div id="second" class="secondBlock blue-grey lighten-5">
+      <SelfIntroduction
+        class="secondBlock__selfIntroduction"
+      ></SelfIntroduction>
     </div>
-    <div id="third" class="third_block blue-grey">
-      <SkillCardList></SkillCardList>
+    <div id="third" class="thirdBlock blue-grey">
+      <SkillCardList class="thirdBlock__skillCardList"></SkillCardList>
     </div>
-    <div id="fourth" class="fourth_block grey lighten-5">
-      <ProductCardList></ProductCardList>
+    <div id="fourth" class="fourthBlock grey lighten-5">
+      <ProductCardList class="fourthBlock__productCardList"></ProductCardList>
     </div>
-    <div id="fifth" class="fifth_block blue-grey">
-      <ContactUs></ContactUs>
+    <div id="fifth" class="fifthBlock blue-grey">
+      <ContactUs class="fifthBlock__contactUs"></ContactUs>
     </div>
     <Footer></Footer>
   </v-app>
 </template>
 
 <script>
-import Header from './components/Header';
-import Footer from './components/Footer';
-import SelfIntroduction from './components/SelfIntroduction';
-import SkillCardList from './components/SkillCardList';
-import ProductCardList from './components/ProductCardList';
-import ContactUs from './components/ContactUs';
-
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import SelfIntroduction from "./components/SelfIntroduction";
+import SkillCardList from "./components/SkillCardList";
+import ProductCardList from "./components/ProductCardList";
+import ContactUs from "./components/ContactUs";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
     Header,
@@ -40,13 +41,13 @@ export default {
     SelfIntroduction,
     SkillCardList,
     ProductCardList,
-    ContactUs
+    ContactUs,
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.first_block {
+.firstBlock {
   background-image: linear-gradient(
       to top left,
       rgb(96, 125, 139, 0.6),
@@ -69,28 +70,27 @@ export default {
   @media screen and (max-width: 768px) {
     height: 600px;
   }
-
-  &__title {
-    color: #ffffff;
-    font-size: 90px;
-    margin-top: 120px;
-    font-weight: normal;
-    text-align: center;
-    @media screen and (max-width: 768px) {
-      font-size: 50px;
-    }
+}
+.title__text {
+  color: #ffffff;
+  font-size: 90px;
+  margin-top: 120px;
+  font-weight: normal;
+  text-align: center;
+  @media screen and (max-width: 768px) {
+    font-size: 50px;
   }
 }
-.second_block {
+.secondBlock {
   padding: 80px 0;
 }
-.third_block {
+.thirdBlock {
   padding: 80px 0;
 }
-.fourth_block {
+.fourthBlock {
   padding: 80px 0;
 }
-.fifth_block {
+.fifthBlock {
   padding: 80px 0;
 }
 </style>

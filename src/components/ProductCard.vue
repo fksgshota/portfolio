@@ -1,11 +1,11 @@
 <template>
-  <v-card class="product_card" max-width="400">
-    <v-img class="product_card__img" height="200px" :src="img_path" :alt="title"></v-img>
-    <v-card-title class="product_card__title">{{ title }}</v-card-title>
-    <v-card-text class="product_card__description">{{ description }}</v-card-text>
-    <v-card-actions>
+  <v-card class="ProductCard" max-width="400">
+    <v-img class="ProductCard__img" height="200px" :src="img_path" :alt="title"></v-img>
+    <v-card-title class="ProductCard__title">{{ title }}</v-card-title>
+    <v-card-text class="ProductCard__description">{{ description }}</v-card-text>
+    <v-card-actions class="cardActions ProductCard__actions">
       <v-btn
-        class="product_card__link"
+        class="cardActions__link"
         color="#34e89e"
         outlined
         block
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.product_card {
+.ProductCard {
   &__img {
     box-shadow: 0 2px 2px -2px gray;
   }

@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="footer blue-grey darken-2" absolute dark>
+  <v-footer class="Footer blue-grey darken-2" absolute dark>
     <small class="copyright">&copy; {{copyrightYear}} Shota Fukushige</small>
   </v-footer>
 </template>
@@ -15,7 +15,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.footer {
+.Footer {
   display: flex;
   justify-content: center;
   align-items: center;

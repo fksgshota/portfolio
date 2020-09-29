@@ -3,7 +3,7 @@
     text
     dark
     large
-    class="header_button"
+    class="HeaderButton"
     ref="button"
     @click="$vuetify.goTo(selector, easeOutQuad)"
   >{{name}}</v-btn>
@@ -23,6 +23,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-</style>
