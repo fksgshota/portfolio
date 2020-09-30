@@ -1,7 +1,8 @@
 <template>
-  <v-container class="product_card_list">
-    <h1 class="product_card_list__title">Products</h1>
+  <v-container class="ProductCardList">
+    <h1 class="ProductCardList__title">Products</h1>
     <ProductCard
+    class="ProductCardList__item"
       v-for="product in products"
       :key="product.title"
       :title="product.title"
@@ -16,9 +17,12 @@
 import ProductCard from './ProductCard';
 
 export default {
-  data () {
-    return {
-      products: [
+  components: {
+    ProductCard,
+  },
+  computed:{
+    products(){
+      return [
         {
           title: "Minesweeper",
           url: "https://fksgshota.github.io/minesweeper",
@@ -27,15 +31,12 @@ export default {
         },
       ]
     }
-  },
-  components: {
-    ProductCard,
-  },
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-.product_card_list {
+.ProductCardList {
   &__title {
     margin-bottom: 50px;
     left: -5px;

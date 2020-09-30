@@ -1,10 +1,25 @@
 <template>
-  <v-app-bar app class="header blue-grey darken-2">
-    <v-app-bar-nav-icon dark class="header_nav_icon" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-    <v-navigation-drawer app dark temporary hide-overlay v-model="drawer">
-      <v-list nav dark>
-        <v-list-item-group v-model="group">
+  <v-app-bar app class="Header blue-grey darken-2">
+    <v-app-bar-nav-icon
+      dark
+      class="Header__navIcon"
+      @click.stop="drawer = !drawer"
+    ></v-app-bar-nav-icon>
+    <v-navigation-drawer
+      class="drawer Header__navDrawer"
+      app
+      dark
+      temporary
+      hide-overlay
+      v-model="drawer"
+    >
+      <v-list class="menuList drawer__list" nav dark>
+        <v-list-item-group
+          class="menuGroupe menuList__itemGroup"
+          v-model="group"
+        >
           <HeaderHamburgerMenu
+            class="menuGroupe__hamburger"
             v-for="link in links"
             :key="link.name"
             :name="link.name"
@@ -13,9 +28,11 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <v-container class="d-flex justify-space-around">
+    <v-container
+      class="HeaderMenu Header__container d-flex justify-space-around"
+    >
       <HeaderButton
-        class="header_nav_link"
+        class="HeaderMenu__link"
         v-for="link in links"
         :key="link.name"
         :name="link.name"
@@ -25,16 +42,23 @@
   </v-app-bar>
 </template>
 <script>
-import HeaderButton from './HeaderButton';
-import HeaderHamburgerMenu from './HeaderHamburgerMenu';
+import HeaderButton from "./HeaderButton";
+import HeaderHamburgerMenu from "./HeaderHamburgerMenu";
 
 export default {
-  data () {
+  components: {
+    HeaderButton,
+    HeaderHamburgerMenu,
+  },
+  data() {
     return {
       drawer: false,
       group: null,
-
-      links: [
+    };
+  },
+  computed:{
+    links(){
+      return [
         {
           name: "TOP",
           selector: "#first",
@@ -58,25 +82,21 @@ export default {
       ]
     }
   },
-  components: {
-    HeaderButton,
-    HeaderHamburgerMenu
-  },
   watch: {
-    group () {
-      this.drawer = false
+    group() {
+      this.drawer = false;
     },
-  }
-}
+  },
+};
 </script>
 <style lang="scss" scoped>
-.header_nav_icon {
+.Header__navIcon {
   display: none;
   @media screen and (max-width: 480px) {
     display: initial;
   }
 }
-.header_nav_link {
+.HeaderMenu__link {
   display: initial;
   @media screen and (max-width: 480px) {
     display: none;
