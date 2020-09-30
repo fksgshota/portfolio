@@ -1,5 +1,5 @@
 <template>
-  <v-app class="app">
+  <v-app class="App">
     <Header class="header"></Header>
     <div id="first" class="firstBlock">
       <v-container class="title firstBlock__container">

@@ -1,11 +1,11 @@
 <template>
-  <v-card class="skill_card blue-grey darken-2" dark>
-    <v-card-title class="skill_card__title">
-      <img :src="img_path" alt="logo" class="skill_card__logo" />
+  <v-card class="skillCard blue-grey darken-2" dark>
+    <v-card-title class="cardTitle skillCard__title">
+      <img :src="img_path" alt="logo" class="cardTitle__logo" />
       {{ title }}
     </v-card-title>
     <v-rating
-      class="skill_card__rating"
+      class="skillCard__rating"
       half-increments
       readonly
       size="30"
@@ -14,7 +14,7 @@
       color="#34e89e"
       background-color="#eeeeee"
     ></v-rating>
-    <v-card-text class="skill_card__description">{{ description }}</v-card-text>
+    <v-card-text class="skillCard__description">{{ description }}</v-card-text>
   </v-card>
 </template>
 
@@ -39,26 +39,26 @@ export default {
       required: true,
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
-.skill_card {
+.skillCard {
   width: 49%;
   margin: 16px 0;
   @media screen and (max-width: 480px) {
     width: 100%;
   }
-  &__title {
-    display: flex;
-    align-items: center;
+  &__rating {
+    padding-left: 16px;
   }
+}
+.cardTitle {
+  display: flex;
+  align-items: center;
   &__logo {
     width: 30px;
     margin-right: 16px;
-  }
-  &__rating {
-    padding-left: 16px;
   }
 }
 </style>

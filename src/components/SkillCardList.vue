@@ -1,64 +1,57 @@
 <template>
-  <v-container class="skill_card_list">
-    <h1 class="skill_card_list__title">Skills</h1>
-    <h2 class="skill_card_list__subtitle">Language</h2>
+  <v-container class="skillCardList">
+    <h1 class="skillCardList__title">Skills</h1>
+    <h2 class="skillCardList__subtitle">Language</h2>
     <SkillCard
+      class="skillCardList__item"
       v-for="language in languages"
+      v-bind="language"
       :key="language.title"
-      :title="language.title"
-      :star="language.star"
-      :description="language.description"
-      :img_path="language.img_path"
     ></SkillCard>
-    <h2 class="skill_card_list__subtitle">Framework</h2>
+    <h2 class="skillCardList__subtitle">Framework</h2>
     <SkillCard
+      class="skillCardList__item"
       v-for="framework in frameworks"
       :key="framework.title"
-      :title="framework.title"
-      :star="framework.star"
-      :description="framework.description"
-      :img_path="framework.img_path"
+      v-bind="framework"
     ></SkillCard>
 
-    <h2 class="skill_card_list__subtitle">Database</h2>
+    <h2 class="skillCardList__subtitle">Database</h2>
     <SkillCard
+      class="skillCardList__item"
       v-for="database in databases"
       :key="database.title"
-      :title="database.title"
-      :star="database.star"
-      :description="database.description"
-      :img_path="database.img_path"
+      v-bind="database"
     ></SkillCard>
 
-    <h2 class="skill_card_list__subtitle">Infrastructure</h2>
+    <h2 class="skillCardList__subtitle">Infrastructure</h2>
     <SkillCard
+      class="skillCardList__item"
       v-for="infrastructure in infrastructures"
       :key="infrastructure.title"
-      :title="infrastructure.title"
-      :star="infrastructure.star"
-      :description="infrastructure.description"
-      :img_path="infrastructure.img_path"
+      v-bind="infrastructure"
     ></SkillCard>
 
-    <h2 class="skill_card_list__subtitle">Tool</h2>
+    <h2 class="skillCardList__subtitle">Tool</h2>
     <SkillCard
+      class="skillCardList__item"
       v-for="tool in tools"
       :key="tool.title"
-      :title="tool.title"
-      :star="tool.star"
-      :description="tool.description"
-      :img_path="tool.img_path"
+      v-bind="tool"
     ></SkillCard>
   </v-container>
 </template>
 
 <script>
-import SkillCard from './SkillCard';
+import SkillCard from "./SkillCard";
 
 export default {
-  data () {
-    return {
-      languages: [
+  components: {
+    SkillCard,
+  },
+  computed: {
+    languages() {
+      return [
         {
           title: "Ruby",
           star: 3,
@@ -81,7 +74,7 @@ export default {
           title: "HTML5",
           star: 4,
           description: "業務で使用している。",
-          img_path: "/portfolio/skills/html_5.svg"
+          img_path: "/portfolio/skills/html_5.svg",
         },
         {
           title: "CSS3",
@@ -89,8 +82,10 @@ export default {
           description: "業務で使用している。",
           img_path: "/portfolio/skills/css_3.svg",
         },
-      ],
-      frameworks: [
+      ];
+    },
+    frameworks() {
+      return [
         {
           title: "Ruby on Rails",
           star: 3,
@@ -121,8 +116,10 @@ export default {
           description: "業務で触ったことがあり、ある程度は理解している。",
           img_path: "/portfolio/skills/middleman.svg",
         },
-      ],
-      databases: [
+      ];
+    },
+    databases() {
+      return [
         {
           title: "MySQL",
           star: 3,
@@ -138,17 +135,21 @@ export default {
         {
           title: "Redis",
           star: 3,
-          description: "業務で使用したことがあり、基本的な使い方は理解している。",
+          description:
+            "業務で使用したことがあり、基本的な使い方は理解している。",
           img_path: "/portfolio/skills/redis.svg",
         },
         {
           title: "DynamoDB",
           star: 2,
-          description: "業務で使用したことがあり、基本的な使い方は理解している。",
+          description:
+            "業務で使用したことがあり、基本的な使い方は理解している。",
           img_path: "/portfolio/skills/amazon_dynamodb.svg",
         },
-      ],
-      infrastructures: [
+      ];
+    },
+    infrastructures() {
+      return [
         {
           title: "Firebase",
           star: 1,
@@ -164,11 +165,14 @@ export default {
         {
           title: "S3",
           star: 2,
-          description: "業務で使用したことがあり、基本的な使い方は理解している。",
+          description:
+            "業務で使用したことがあり、基本的な使い方は理解している。",
           img_path: "/portfolio/skills/amazon_s3.svg",
         },
-      ],
-      tools: [
+      ];
+    },
+    tools() {
+      return [
         {
           title: "Airtable",
           star: 3,
@@ -203,7 +207,8 @@ export default {
         {
           title: "GitHub",
           star: 4,
-          description: "基本的な使い方は習得していて、多人数でのチーム開発経験あり。",
+          description:
+            "基本的な使い方は習得していて、多人数でのチーム開発経験あり。",
           img_path: "/portfolio/skills/octocat.png",
         },
         {
@@ -219,18 +224,14 @@ export default {
           description: "業務で使用している。",
           img_path: "/portfolio/skills/slack.svg",
         },
-
-      ],
-    }
-  },
-  components: {
-    SkillCard,
+      ];
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.skill_card_list {
+.skillCardList {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

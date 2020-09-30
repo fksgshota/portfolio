@@ -1,31 +1,35 @@
 <template>
   <v-container class="SelfIntroduction">
     <v-card class="myInfo">
-      <div class="myInfo__top">
-        <div class="block">
-          <img src="/portfolio/shota_fukushige_icon.jpg" class="myInfo__img" />
+      <div class="basicInfo myInfo__basicInfo">
+        <div class="myImg basicInfo__img">
+          <img src="/portfolio/shota_fukushige_icon.jpg" class="myImg__item" />
         </div>
-        <div class="myInfo__overview">
-          <v-card-title class="myInfo__ja_name">福重 章太</v-card-title>
-          <v-card-subtitle class="myInfo__en_name">Fukushige Shota</v-card-subtitle>
-          <p class="myInfo__age">{{ageDisp}}</p>
+        <div class="overview myInfo__overview">
+          <v-card-title class="overview__jaName">福重 章太</v-card-title>
+          <v-card-subtitle class="overview__enName"
+            >Fukushige Shota</v-card-subtitle
+          >
+          <p class="overview__age">{{ ageDisp }}</p>
           <a
-            class="myInfo__company"
+            class="overview__company"
             href="https://unimal.jp/"
             target="_blank"
             rel="noopener noreferrer"
-          >株式会社unimal</a>
-          <p class="myInfo__work">フルスタックエンジニア見習い</p>
-          <p class="myInfo__blog">
+            >株式会社unimal</a
+          >
+          <p class="overview__work">フルスタックエンジニア見習い</p>
+          <p class="blog overview__blog">
             ブログ：
             <a
-              class="myInfo__blog__link"
+              class="blog__link"
               href="https://fksgshota.hatenablog.com/"
               target="_blank"
               rel="noopener noreferrer"
-            >笑う門には福重なる</a>
+              >笑う門には福重なる</a
+            >
           </p>
-          <SNSList></SNSList>
+          <SNSList class="overview__sns"></SNSList>
         </div>
       </div>
 
@@ -40,51 +44,51 @@
 </template>
 
 <script>
-import SNSList from './SNSList';
+import SNSList from "./SNSList";
 
 export default {
+  components: {
+    SNSList,
+  },
   methods: {
     ageCalc: function (year, month, day) {
-      const birthY = year.toString()
-      const birthM = month.toString()
-      const birthD = day.toString()
-      const today = new Date()
-      const birthFull = parseFloat(`${birthY}${birthM.padStart(2, '0')}${birthD.padStart(2, '0')}`)
-      const todayFull = parseFloat(`${today.getFullYear()}${(today.getMonth() + 1).toString().padStart(2, '0')}${today.getDay().toString().padStart(2, '0')}`)
+      const birthY = year.toString();
+      const birthM = month.toString();
+      const birthD = day.toString();
+      const today = new Date();
+      const birthFull = parseFloat(
+        `${birthY}${birthM.padStart(2, "0")}${birthD.padStart(2, "0")}`
+      );
+      const todayFull = parseFloat(
+        `${today.getFullYear()}${(today.getMonth() + 1)
+          .toString()
+          .padStart(2, "0")}${today.getDay().toString().padStart(2, "0")}`
+      );
 
-      return Math.floor((todayFull - birthFull) / 10000)
-    }
+      return Math.floor((todayFull - birthFull) / 10000);
+    },
   },
   computed: {
     ageDisp: function () {
-      const birthY = 1993
-      const birthM = 8
-      const birthD = 18
-      const age = this.ageCalc(birthY, birthM, birthD)
+      const birthY = 1993;
+      const birthM = 8;
+      const birthD = 18;
+      const age = this.ageCalc(birthY, birthM, birthD);
 
-      return `${age}歳`
-    }
+      return `${age}歳`;
+    },
   },
-  components: {
-    SNSList
-  },
-}
+};
 </script>
 
 <style lang="scss" scoped>
 .myInfo {
   display: flex;
   flex-direction: column;
-  &__top {
-    display: flex;
-    @media screen and (max-width: 480px) {
-      flex-wrap: wrap;
-    }
-  }
-  .block {
-    display: block;
-  }
-  &__img {
+}
+.myImg {
+  display: block;
+  &__item {
     margin: 16px 0 0 16px;
     width: 250px;
     height: auto;
@@ -94,9 +98,17 @@ export default {
       padding: 16px;
     }
   }
-  &__overview {
-    width: auto;
+}
+
+.basicInfo {
+  display: flex;
+  @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
   }
+}
+
+.overview {
+  width: auto;
   &__age {
     padding-left: 16px;
     margin-bottom: 0;
@@ -110,11 +122,11 @@ export default {
     padding-left: 16px;
     margin-bottom: 0;
   }
-  &__blog {
-    padding: 0 0 16px 16px;
-    &__link {
-      color: rgba(0, 0, 0, 0.87);
-    }
+}
+.blog {
+  padding: 0 0 16px 16px;
+  &__link {
+    color: rgba(0, 0, 0, 0.87);
   }
 }
 </style>
