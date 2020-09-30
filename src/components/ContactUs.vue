@@ -2,13 +2,13 @@
   <v-container class="ContactUs">
     <h1 class="ContactUs__title">Contact Us</h1>
     <v-form
-      class="form ContactUs__form"
+      class="contactForm ContactUs__form"
       ref="ContactUs_form"
       v-on:submit.prevent="submit"
       v-if="showForm"
     >
       <v-text-field
-        class="form__item"
+        class="contactForm__item"
         dark
         :rules="nameRules"
         label="Name or Company"
@@ -17,7 +17,7 @@
         v-model="name"
       ></v-text-field>
       <v-text-field
-        class="form__item"
+        class="contactForm__item"
         dark
         :rules="emailRules"
         label="email"
@@ -26,7 +26,7 @@
         v-model="email"
       ></v-text-field>
       <v-text-field
-        class="form__item"
+        class="contactForm__item"
         dark
         :rules="subjectRules"
         label="subject"
@@ -35,7 +35,7 @@
         v-model="subject"
       ></v-text-field>
       <v-textarea
-        class="form__item"
+        class="contactForm__item"
         dark
         :rules="messageRules"
         label="message"

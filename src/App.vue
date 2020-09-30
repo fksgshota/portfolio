@@ -2,8 +2,8 @@
   <v-app class="App">
     <Header class="header"></Header>
     <div id="first" class="firstBlock">
-      <v-container class="title firstBlock__container">
-        <h1 class="title__text">Shota Fukushige's portfolio</h1>
+      <v-container class="siteTitle firstBlock__container">
+        <h1 class="siteTitle__text">Shota Fukushige's portfolio</h1>
       </v-container>
     </div>
     <div id="second" class="secondBlock blue-grey lighten-5">
@@ -71,7 +71,7 @@ export default {
     height: 600px;
   }
 }
-.title__text {
+.siteTitle__text {
   color: #ffffff;
   font-size: 90px;
   margin-top: 120px;
