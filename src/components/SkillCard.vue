@@ -46,6 +46,10 @@ export default {
 .skillCard {
   width: 49%;
   margin: 16px 0;
+  transition: background-color 0.5s;
+  &:hover {
+    background-color: #4d626b !important;
+  }
   @media screen and (max-width: 480px) {
     width: 100%;
   }

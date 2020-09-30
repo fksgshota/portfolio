@@ -83,10 +83,10 @@ export default {
           img_path: "/portfolio/skills/css_3.svg",
         },
         {
-          title: "Sass",
+          title: "Scss",
           star: 3,
           description: "業務で使用している。",
-          img_path: "/portfolio/skills/sass.svg",
+          img_path: "/portfolio/skills/scss.svg",
         },
       ];
     },
