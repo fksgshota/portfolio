@@ -82,6 +82,12 @@ export default {
           description: "業務で使用している。",
           img_path: "/portfolio/skills/css_3.svg",
         },
+        {
+          title: "Scss",
+          star: 3,
+          description: "業務で使用している。",
+          img_path: "/portfolio/skills/scss.svg",
+        },
       ];
     },
     frameworks() {
@@ -181,7 +187,7 @@ export default {
         },
         {
           title: "Asana",
-          star: 3,
+          star: 4,
           description: "業務でメインのタスク管理ツールとして使用している。",
           img_path: "/portfolio/skills/asana.svg",
         },
@@ -220,7 +226,7 @@ export default {
 
         {
           title: "Slack",
-          star: 3,
+          star: 4,
           description: "業務で使用している。",
           img_path: "/portfolio/skills/slack.svg",
         },
