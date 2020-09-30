@@ -19,10 +19,10 @@
             >株式会社unimal</a
           >
           <p class="overview__work">フルスタックエンジニア見習い</p>
-          <p class="blog overview__blog">
+          <p class="myBlog overview__blog">
             ブログ：
             <a
-              class="blog__link"
+              class="myBlog__link"
               href="https://fksgshota.hatenablog.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -123,7 +123,7 @@ export default {
     margin-bottom: 0;
   }
 }
-.blog {
+.myBlog {
   padding: 0 0 16px 16px;
   &__link {
     color: rgba(0, 0, 0, 0.87);

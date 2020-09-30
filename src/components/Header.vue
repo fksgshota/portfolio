@@ -6,14 +6,14 @@
       @click.stop="drawer = !drawer"
     ></v-app-bar-nav-icon>
     <v-navigation-drawer
-      class="drawer Header__navDrawer"
+      class="navDrawer Header__navDrawer"
       app
       dark
       temporary
       hide-overlay
       v-model="drawer"
     >
-      <v-list class="menuList drawer__list" nav dark>
+      <v-list class="menuList navDrawer__list" nav dark>
         <v-list-item-group
           class="menuGroupe menuList__itemGroup"
           v-model="group"
