@@ -10,7 +10,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "elliptic": "^6.5.3",
+    "elliptic": "^6.5.4",
     "vue": "^2.6.12",
     "vue-axios": "^2.1.5",
     "vuetify": "^2.3.12"
