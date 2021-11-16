@@ -54,7 +54,7 @@ export default {
       return [
         {
           title: "Ruby",
-          star: 3,
+          star: 4,
           description: "業務で使用している。",
           img_path: "/portfolio/skills/ruby.png",
         },
@@ -65,9 +65,15 @@ export default {
           img_path: "/portfolio/skills/javascript.svg",
         },
         {
+          title: "TypeScript",
+          star: 2,
+          description: "業務で使用しながら学習中",
+          img_path: "/portfolio/skills/typescript.svg",
+        },
+        {
           title: "Go",
           star: 1,
-          description: "学習を始めたばかり",
+          description: "学習していたが一時中断",
           img_path: "/portfolio/skills/go.svg",
         },
         {
@@ -94,7 +100,7 @@ export default {
       return [
         {
           title: "Ruby on Rails",
-          star: 3,
+          star: 4,
           description: "業務で使用している。",
           img_path: "/portfolio/skills/rails.svg",
         },
@@ -106,9 +112,15 @@ export default {
         },
         {
           title: "Nuxt.js",
-          star: 1,
+          star: 2,
           description: "学習中",
-          img_path: "/portfolio/skills/nuxt.svg",
+          img_path: "/portfolio/skills/nuxt_js.svg",
+        },
+        {
+          title: "Next.js",
+          star: 2,
+          description: "業務で使用しながら学習中",
+          img_path: "/portfolio/skills/next_js.svg",
         },
         {
           title: "jQuery",
@@ -158,8 +170,8 @@ export default {
       return [
         {
           title: "Firebase",
-          star: 1,
-          description: "使用経験はあり。",
+          star: 2,
+          description: "業務で使用している",
           img_path: "/portfolio/skills/firebase.svg",
         },
         {
@@ -188,7 +200,7 @@ export default {
         {
           title: "Asana",
           star: 4,
-          description: "業務でメインのタスク管理ツールとして使用している。",
+          description: "業務でタスク管理ツールとして使用している。",
           img_path: "/portfolio/skills/asana.svg",
         },
         {
@@ -207,7 +219,7 @@ export default {
         {
           title: "Docker",
           star: 2,
-          description: "使用したことはあるが、まだ学習中。",
+          description: "業務で使用しながら学習中",
           img_path: "/portfolio/skills/docker.png",
         },
         {
@@ -223,12 +235,23 @@ export default {
           description: "業務で使用している。",
           img_path: "/portfolio/skills/figma.svg",
         },
-
+        {
+          title: "Miro",
+          star: 3,
+          description: "業務で使用している。",
+          img_path: "/portfolio/skills/miro.svg",
+        },
         {
           title: "Slack",
           star: 4,
           description: "業務で使用している。",
           img_path: "/portfolio/skills/slack.svg",
+        },
+        {
+          title: "Notion",
+          star: 4,
+          description: "業務で使用している。",
+          img_path: "/portfolio/skills/notion.svg",
         },
       ];
     },
