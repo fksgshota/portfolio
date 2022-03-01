@@ -1,6 +1,10 @@
 <template>
-  <v-footer class="Footer blue-grey darken-2" absolute dark>
-    <small class="copyright">&copy; {{copyrightYear}} Shota Fukushige</small>
+  <v-footer
+    class="Footer blue-grey darken-2"
+    absolute
+    dark
+  >
+    <small class="copyright">&copy; {{ copyrightYear }} Shota Fukushige</small>
   </v-footer>
 </template>
 
@@ -21,4 +25,3 @@ export default {
   align-items: center;
 }
 </style>
-

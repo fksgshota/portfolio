@@ -1,7 +1,14 @@
 <template>
-  <v-card class="skillCard blue-grey darken-2" dark>
+  <v-card
+    class="skillCard blue-grey darken-2"
+    dark
+  >
     <v-card-title class="cardTitle skillCard__title">
-      <img :src="img_path" alt="logo" class="cardTitle__logo" />
+      <img
+        :src="imgPath"
+        alt="logo"
+        class="cardTitle__logo"
+      >
       {{ title }}
     </v-card-title>
     <v-rating
@@ -13,8 +20,10 @@
       :value="star"
       color="#34e89e"
       background-color="#eeeeee"
-    ></v-rating>
-    <v-card-text class="skillCard__description">{{ description }}</v-card-text>
+    />
+    <v-card-text class="skillCard__description">
+      {{ description }}
+    </v-card-text>
   </v-card>
 </template>
 
@@ -34,7 +43,7 @@ export default {
       type: String,
       required: true,
     },
-    img_path: {
+    imgPath: {
       type: String,
       required: true,
     },

@@ -1,56 +1,72 @@
 <template>
   <v-container class="ContactUs">
-    <h1 class="ContactUs__title">Contact Us</h1>
+    <h1 class="ContactUs__title">
+      Contact Us
+    </h1>
     <v-form
-      class="contactForm ContactUs__form"
-      ref="ContactUs_form"
-      v-on:submit.prevent="submit"
       v-if="showForm"
+      ref="ContactUs_form"
+      class="contactForm ContactUs__form"
+      @submit.prevent="submit"
     >
       <v-text-field
+        v-model="name"
         class="contactForm__item"
         dark
         :rules="nameRules"
         label="Name or Company"
         type="text"
         placeholder="name"
-        v-model="name"
-      ></v-text-field>
+      />
       <v-text-field
+        v-model="email"
         class="contactForm__item"
         dark
         :rules="emailRules"
         label="email"
         type="email"
         placeholder="example@email.jp"
-        v-model="email"
-      ></v-text-field>
+      />
       <v-text-field
+        v-model="subject"
         class="contactForm__item"
         dark
         :rules="subjectRules"
         label="subject"
         type
         placeholder="title"
-        v-model="subject"
-      ></v-text-field>
+      />
       <v-textarea
+        v-model="message"
         class="contactForm__item"
         dark
         :rules="messageRules"
         label="message"
-        v-model="message"
-      ></v-textarea>
-      <v-btn outlined dark type="submit">SEND</v-btn>
+      />
+      <v-btn
+        outlined
+        dark
+        type="submit"
+      >
+        SEND
+      </v-btn>
     </v-form>
-    <div class="message ContactUs__success" v-else>
+    <div
+      v-else
+      class="message ContactUs__success"
+    >
       <p class="message__thanks">
         お問い合わせありがとうございます！
-        <br />確認後に返信させていただきます
+        <br>確認後に返信させていただきます
       </p>
-      <v-btn class="message__reload" outlined dark href="/"
-        >送信画面を表示する</v-btn
+      <v-btn
+        class="message__reload"
+        outlined
+        dark
+        href="/"
       >
+        送信画面を表示する
+      </v-btn>
     </div>
   </v-container>
 </template>

@@ -1,8 +1,20 @@
 <template>
-  <v-card class="ProductCard" max-width="400">
-    <v-img class="ProductCard__img" height="200px" :src="img_path" :alt="title"></v-img>
-    <v-card-title class="ProductCard__title">{{ title }}</v-card-title>
-    <v-card-text class="ProductCard__description">{{ description }}</v-card-text>
+  <v-card
+    class="ProductCard"
+    max-width="400"
+  >
+    <v-img
+      class="ProductCard__img"
+      height="200px"
+      :src="imgPath"
+      :alt="title"
+    />
+    <v-card-title class="ProductCard__title">
+      {{ title }}
+    </v-card-title>
+    <v-card-text class="ProductCard__description">
+      {{ description }}
+    </v-card-text>
     <v-card-actions class="cardActions ProductCard__actions">
       <v-btn
         class="cardActions__link"
@@ -12,7 +24,9 @@
         :href="url"
         target="_blank"
         rel="noopener noreferrer"
-      >Show more</v-btn>
+      >
+        Show more
+      </v-btn>
     </v-card-actions>
   </v-card>
 </template>
@@ -32,7 +46,7 @@ export default {
       type: String,
       required: true,
     },
-    img_path: {
+    imgPath: {
       type: String,
       required: true,
     },

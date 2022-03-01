@@ -1,24 +1,26 @@
 <template>
   <v-container class="ProductCardList">
-    <h1 class="ProductCardList__title">Products</h1>
-    <ProductCard
-    class="ProductCardList__item"
+    <h1 class="ProductCardList__title">
+      Products
+    </h1>
+    <MyProductCard
       v-for="product in products"
       :key="product.title"
+      class="ProductCardList__item"
       :title="product.title"
       :url="product.url"
       :description="product.description"
       :img_path="product.img_path"
-    ></ProductCard>
+    />
   </v-container>
 </template>
 
 <script>
-import ProductCard from './ProductCard';
+import MyProductCard from './MyProductCard';
 
 export default {
   components: {
-    ProductCard,
+    MyProductCard,
   },
   computed:{
     products(){

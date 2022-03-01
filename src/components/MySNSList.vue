@@ -1,11 +1,14 @@
 <template>
   <ul class="snsList">
     <li
-      class="snsListItem snsList__item"
       v-for="account in accounts"
       :key="account.name"
+      class="snsListItem snsList__item"
     >
-      <a class="snsListItem__link" :href="account.url">
+      <a
+        class="snsListItem__link"
+        :href="account.url"
+      >
         <v-icon large>{{ account.icon }} fa-fw</v-icon>
       </a>
     </li>

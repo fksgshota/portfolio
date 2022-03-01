@@ -1,12 +1,14 @@
 <template>
   <v-btn
+    ref="button"
     text
     dark
     large
     class="HeaderButton"
-    ref="button"
     @click="$vuetify.goTo(selector, easeOutQuad)"
-  >{{name}}</v-btn>
+  >
+    {{ name }}
+  </v-btn>
 </template>
 
 <script>

@@ -1,47 +1,64 @@
 <template>
   <v-app class="App">
-    <Header class="header"></Header>
-    <div id="first" class="firstBlock">
+    <MyHeader class="header" />
+    <div
+      id="first"
+      class="firstBlock"
+    >
       <v-container class="siteTitle firstBlock__container">
-        <h1 class="siteTitle__text">Shota Fukushige's portfolio</h1>
+        <h1 class="siteTitle__text">
+          Shota Fukushige's portfolio
+        </h1>
       </v-container>
     </div>
-    <div id="second" class="secondBlock blue-grey lighten-5">
-      <SelfIntroduction
+    <div
+      id="second"
+      class="secondBlock blue-grey lighten-5"
+    >
+      <MySelfIntroduction
         class="secondBlock__selfIntroduction"
-      ></SelfIntroduction>
+      />
     </div>
-    <div id="third" class="thirdBlock blue-grey">
-      <SkillCardList class="thirdBlock__skillCardList"></SkillCardList>
+    <div
+      id="third"
+      class="thirdBlock blue-grey"
+    >
+      <MySkillCardList class="thirdBlock__skillCardList" />
     </div>
-    <div id="fourth" class="fourthBlock grey lighten-5">
-      <ProductCardList class="fourthBlock__productCardList"></ProductCardList>
+    <div
+      id="fourth"
+      class="fourthBlock grey lighten-5"
+    >
+      <MyProductCardList class="fourthBlock__productCardList" />
     </div>
-    <div id="fifth" class="fifthBlock blue-grey">
-      <ContactUs class="fifthBlock__contactUs"></ContactUs>
+    <div
+      id="fifth"
+      class="fifthBlock blue-grey"
+    >
+      <MyContactUs class="fifthBlock__contactUs" />
     </div>
-    <Footer></Footer>
+    <MyFooter />
   </v-app>
 </template>
 
 <script>
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import SelfIntroduction from "./components/SelfIntroduction";
-import SkillCardList from "./components/SkillCardList";
-import ProductCardList from "./components/ProductCardList";
-import ContactUs from "./components/ContactUs";
+import MyHeader from "./components/MyHeader";
+import MyFooter from "./components/MyFooter";
+import MySelfIntroduction from "./components/MySelfIntroduction";
+import MySkillCardList from "./components/MySkillCardList";
+import MyProductCardList from "./components/MyProductCardList";
+import MyContactUs from "./components/MyContactUs";
 
 export default {
   name: "App",
 
   components: {
-    Header,
-    Footer,
-    SelfIntroduction,
-    SkillCardList,
-    ProductCardList,
-    ContactUs,
+    MyHeader,
+    MyFooter,
+    MySelfIntroduction,
+    MySkillCardList,
+    MyProductCardList,
+    MyContactUs,
   },
 };
 </script>
@@ -53,7 +70,7 @@ export default {
       rgb(96, 125, 139, 0.6),
       rgb(96, 125, 139, 0.6)
     ),
-    url("/portfolio/shota_fukushige.jpeg");
+    url("../public/shota_fukushige.jpeg");
   background-size: cover;
   background-position: center;
   width: 100%;

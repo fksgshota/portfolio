@@ -1,53 +1,65 @@
 <template>
   <v-container class="skillCardList">
-    <h1 class="skillCardList__title">Skills</h1>
-    <h2 class="skillCardList__subtitle">Language</h2>
-    <SkillCard
-      class="skillCardList__item"
+    <h1 class="skillCardList__title">
+      Skills
+    </h1>
+    <h2 class="skillCardList__subtitle">
+      Language
+    </h2>
+    <MySkillCard
       v-for="language in languages"
       v-bind="language"
       :key="language.title"
-    ></SkillCard>
-    <h2 class="skillCardList__subtitle">Framework</h2>
-    <SkillCard
       class="skillCardList__item"
+    />
+    <h2 class="skillCardList__subtitle">
+      Framework
+    </h2>
+    <MySkillCard
       v-for="framework in frameworks"
       :key="framework.title"
-      v-bind="framework"
-    ></SkillCard>
-
-    <h2 class="skillCardList__subtitle">Database</h2>
-    <SkillCard
       class="skillCardList__item"
+      v-bind="framework"
+    />
+
+    <h2 class="skillCardList__subtitle">
+      Database
+    </h2>
+    <MySkillCard
       v-for="database in databases"
       :key="database.title"
-      v-bind="database"
-    ></SkillCard>
-
-    <h2 class="skillCardList__subtitle">Infrastructure</h2>
-    <SkillCard
       class="skillCardList__item"
+      v-bind="database"
+    />
+
+    <h2 class="skillCardList__subtitle">
+      Infrastructure
+    </h2>
+    <MySkillCard
       v-for="infrastructure in infrastructures"
       :key="infrastructure.title"
-      v-bind="infrastructure"
-    ></SkillCard>
-
-    <h2 class="skillCardList__subtitle">Tool</h2>
-    <SkillCard
       class="skillCardList__item"
+      v-bind="infrastructure"
+    />
+
+    <h2 class="skillCardList__subtitle">
+      Tool
+    </h2>
+    <MySkillCard
       v-for="tool in tools"
       :key="tool.title"
+      class="skillCardList__item"
       v-bind="tool"
-    ></SkillCard>
+    />
   </v-container>
 </template>
 
 <script>
-import SkillCard from "./SkillCard";
+import MySkillCard from "./MySkillCard";
 
 export default {
   components: {
-    SkillCard,
+    MySkillCard,
   },
   computed: {
     languages() {
@@ -56,43 +68,43 @@ export default {
           title: "Ruby",
           star: 4,
           description: "業務で使用している。",
-          img_path: "/portfolio/skills/ruby.png",
+          imgPath: "/portfolio/skills/ruby.png",
         },
         {
           title: "JavaScript",
           star: 3,
           description: "業務で使用している。",
-          img_path: "/portfolio/skills/javascript.svg",
+          imgPath: "/portfolio/skills/javascript.svg",
         },
         {
           title: "TypeScript",
           star: 2,
           description: "業務で使用しながら学習中",
-          img_path: "/portfolio/skills/typescript.svg",
+          imgPath: "/portfolio/skills/typescript.svg",
         },
         {
           title: "Go",
           star: 1,
           description: "学習していたが一時中断",
-          img_path: "/portfolio/skills/go.svg",
+          imgPath: "/portfolio/skills/go.svg",
         },
         {
           title: "HTML5",
           star: 4,
           description: "業務で使用している。",
-          img_path: "/portfolio/skills/html_5.svg",
+          imgPath: "/portfolio/skills/html_5.svg",
         },
         {
           title: "CSS3",
           star: 4,
           description: "業務で使用している。",
-          img_path: "/portfolio/skills/css_3.svg",
+          imgPath: "/portfolio/skills/css_3.svg",
         },
         {
           title: "Scss",
           star: 3,
           description: "業務で使用している。",
-          img_path: "/portfolio/skills/scss.svg",
+          imgPath: "/portfolio/skills/scss.svg",
         },
       ];
     },
@@ -102,37 +114,37 @@ export default {
           title: "Ruby on Rails",
           star: 4,
           description: "業務で使用している。",
-          img_path: "/portfolio/skills/rails.svg",
+          imgPath: "/portfolio/skills/rails.svg",
         },
         {
           title: "Vue.js",
           star: 2,
           description: "業務で使用しながら学習中",
-          img_path: "/portfolio/skills/vue.svg",
+          imgPath: "/portfolio/skills/vue.svg",
         },
         {
           title: "Nuxt.js",
           star: 2,
           description: "学習中",
-          img_path: "/portfolio/skills/nuxt_js.svg",
+          imgPath: "/portfolio/skills/nuxt_js.svg",
         },
         {
           title: "Next.js",
           star: 2,
           description: "業務で使用しながら学習中",
-          img_path: "/portfolio/skills/next_js.svg",
+          imgPath: "/portfolio/skills/next_js.svg",
         },
         {
           title: "jQuery",
           star: 3,
           description: "基本的な使い方は理解している",
-          img_path: "/portfolio/skills/jquery.svg",
+          imgPath: "/portfolio/skills/jquery.svg",
         },
         {
           title: "Middleman",
           star: 2,
           description: "業務で触ったことがあり、ある程度は理解している。",
-          img_path: "/portfolio/skills/middleman.svg",
+          imgPath: "/portfolio/skills/middleman.svg",
         },
       ];
     },
@@ -142,27 +154,27 @@ export default {
           title: "MySQL",
           star: 3,
           description: "使用経験あり",
-          img_path: "/portfolio/skills/mysql.png",
+          imgPath: "/portfolio/skills/mysql.png",
         },
         {
           title: "PostgreSQL",
           star: 3,
           description: "使用経験あり",
-          img_path: "/portfolio/skills/postgresql.svg",
+          imgPath: "/portfolio/skills/postgresql.svg",
         },
         {
           title: "Redis",
           star: 3,
           description:
             "業務で使用したことがあり、基本的な使い方は理解している。",
-          img_path: "/portfolio/skills/redis.svg",
+          imgPath: "/portfolio/skills/redis.svg",
         },
         {
           title: "DynamoDB",
           star: 2,
           description:
             "業務で使用したことがあり、基本的な使い方は理解している。",
-          img_path: "/portfolio/skills/amazon_dynamodb.svg",
+          imgPath: "/portfolio/skills/amazon_dynamodb.svg",
         },
       ];
     },
@@ -172,20 +184,20 @@ export default {
           title: "Firebase",
           star: 2,
           description: "業務で使用している",
-          img_path: "/portfolio/skills/firebase.svg",
+          imgPath: "/portfolio/skills/firebase.svg",
         },
         {
           title: "Heroku",
           star: 3,
           description: "業務で使用している。基本的な使い方は理解している。",
-          img_path: "/portfolio/skills/heroku.svg",
+          imgPath: "/portfolio/skills/heroku.svg",
         },
         {
           title: "S3",
           star: 2,
           description:
             "業務で使用したことがあり、基本的な使い方は理解している。",
-          img_path: "/portfolio/skills/amazon_s3.svg",
+          imgPath: "/portfolio/skills/amazon_s3.svg",
         },
       ];
     },
@@ -195,63 +207,63 @@ export default {
           title: "Airtable",
           star: 3,
           description: "情報共有・タスク管理で使用したことあり。",
-          img_path: "/portfolio/skills/airtable.svg",
+          imgPath: "/portfolio/skills/airtable.svg",
         },
         {
           title: "Asana",
           star: 4,
           description: "業務でタスク管理ツールとして使用している。",
-          img_path: "/portfolio/skills/asana.svg",
+          imgPath: "/portfolio/skills/asana.svg",
         },
         {
           title: "Git",
           star: 4,
           description: "基本的な使い方は習得している",
-          img_path: "/portfolio/skills/git.png",
+          imgPath: "/portfolio/skills/git.png",
         },
         {
           title: "CircleCI",
           star: 2,
           description: "基本的な使い方は理解している。",
-          img_path: "/portfolio/skills/circleci.png",
+          imgPath: "/portfolio/skills/circleci.png",
         },
 
         {
           title: "Docker",
           star: 2,
           description: "業務で使用しながら学習中",
-          img_path: "/portfolio/skills/docker.png",
+          imgPath: "/portfolio/skills/docker.png",
         },
         {
           title: "GitHub",
           star: 4,
           description:
             "基本的な使い方は習得していて、多人数でのチーム開発経験あり。",
-          img_path: "/portfolio/skills/octocat.png",
+          imgPath: "/portfolio/skills/octocat.png",
         },
         {
           title: "Figma",
           star: 3,
           description: "業務で使用している。",
-          img_path: "/portfolio/skills/figma.svg",
+          imgPath: "/portfolio/skills/figma.svg",
         },
         {
           title: "Miro",
           star: 3,
           description: "業務で使用している。",
-          img_path: "/portfolio/skills/miro.svg",
+          imgPath: "/portfolio/skills/miro.svg",
         },
         {
           title: "Slack",
           star: 4,
           description: "業務で使用している。",
-          img_path: "/portfolio/skills/slack.svg",
+          imgPath: "/portfolio/skills/slack.svg",
         },
         {
           title: "Notion",
           star: 4,
           description: "業務で使用している。",
-          img_path: "/portfolio/skills/notion.svg",
+          imgPath: "/portfolio/skills/notion.svg",
         },
       ];
     },

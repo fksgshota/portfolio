@@ -1,54 +1,61 @@
 <template>
-  <v-app-bar app class="Header blue-grey darken-2">
+  <v-app-bar
+    app
+    class="Header blue-grey darken-2"
+  >
     <v-app-bar-nav-icon
       dark
       class="Header__navIcon"
       @click.stop="drawer = !drawer"
-    ></v-app-bar-nav-icon>
+    />
     <v-navigation-drawer
+      v-model="drawer"
       class="navDrawer Header__navDrawer"
       app
       dark
       temporary
       hide-overlay
-      v-model="drawer"
     >
-      <v-list class="menuList navDrawer__list" nav dark>
+      <v-list
+        class="menuList navDrawer__list"
+        nav
+        dark
+      >
         <v-list-item-group
-          class="menuGroupe menuList__itemGroup"
           v-model="group"
+          class="menuGroupe menuList__itemGroup"
         >
-          <HeaderHamburgerMenu
-            class="menuGroupe__hamburger"
+          <MyHeaderHamburgerMenu
             v-for="link in links"
             :key="link.name"
+            class="menuGroupe__hamburger"
             :name="link.name"
             :selector="link.selector"
-          ></HeaderHamburgerMenu>
+          />
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
     <v-container
       class="HeaderMenu Header__container d-flex justify-space-around"
     >
-      <HeaderButton
-        class="HeaderMenu__link"
+      <MyHeaderButton
         v-for="link in links"
         :key="link.name"
+        class="HeaderMenu__link"
         :name="link.name"
         :selector="link.selector"
-      ></HeaderButton>
+      />
     </v-container>
   </v-app-bar>
 </template>
 <script>
-import HeaderButton from "./HeaderButton";
-import HeaderHamburgerMenu from "./HeaderHamburgerMenu";
+import MyHeaderButton from "./MyHeaderButton";
+import MyHeaderHamburgerMenu from "./MyHeaderHamburgerMenu";
 
 export default {
   components: {
-    HeaderButton,
-    HeaderHamburgerMenu,
+    MyHeaderButton,
+    MyHeaderHamburgerMenu,
   },
   data() {
     return {
