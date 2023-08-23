@@ -118,8 +118,7 @@ export default {
         // Ajax POST通信
         // eslint-disable-next-line no-unused-vars
         axios
-          // .post(CORS_PROXY + GOOGLE_FORM_ACTION, submitParams)
-          .post(GOOGLE_FORM_ACTION, submitParams)
+          .post(GOOGLE_FORM_ACTION, submitParams) // .post(CORS_PROXY + GOOGLE_FORM_ACTION, submitParams)
           .then(() => {
             // フォーム非表示
             this.showForm = false;
