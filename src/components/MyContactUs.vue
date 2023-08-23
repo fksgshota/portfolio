@@ -110,7 +110,7 @@ export default {
         submitParams.append("entry.839337160", this.message);
 
         // CORSエラー対策
-        const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+        const CORS_PROXY = "https://fksgshota-cors-anywhere-2664fda640c0.herokuapp.com/";
         // Googleフォームのaction属性値
         const GOOGLE_FORM_ACTION =
           "https://docs.google.com/forms/u/2/d/e/1FAIpQLSfz2jqqXhiEIZXbkCHjA0IlnD5WFNRCdIEKcMhvGnAKSRjGwQ/formResponse";
