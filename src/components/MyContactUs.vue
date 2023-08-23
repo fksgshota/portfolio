@@ -113,7 +113,7 @@ export default {
         const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
         // Googleフォームのaction属性値
         const GOOGLE_FORM_ACTION =
-          "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdgBAhGyLPj06ZpSaSSHSOleo8JUk-BIsyJ4QbJ-IfPsVi3_g/formResponse";
+          "https://docs.google.com/forms/u/2/d/e/1FAIpQLSfz2jqqXhiEIZXbkCHjA0IlnD5WFNRCdIEKcMhvGnAKSRjGwQ/formResponse";
 
         // Ajax POST通信
         // eslint-disable-next-line no-unused-vars
